@@ -6,6 +6,10 @@
 
 LymphNode is a post-hoc defense framework that provides active intellectual property (IP) protection for Deep Neural Networks. It enforces a "default-deny" policy by injecting Generalized Sparse Universal Adversarial Perturbations (GSUAP) into the feature space, neutralizing model utility for unauthorized queries while selectively restoring fidelity for authorized inputs carrying a stealthy feature-domain credential.
 
+<p align="center">
+  <img src="docs/overview.png" width="800" alt="LymphNode Framework Overview">
+</p>
+
 ## Repository Structure
 
 ```
