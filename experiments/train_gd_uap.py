@@ -85,7 +85,7 @@ def get_model_path(base_path, model_name, dataset='cifar10'):
 
     epoch = dataset_epochs[dataset]
     filename = f"clean_{model_name}_{dataset}_epoch{epoch if epoch else ''}.pth"
-    return os.path.join(base_path, 'saved_models', 'clean_models', filename)
+    return os.path.join(base_path, 'checkpoints', 'clean_models', filename)
 
 
 def select_channels(model_name, method, ratio, dataloader, device, base_path, dataset='cifar10'):
@@ -364,7 +364,7 @@ def main():
                         help='VIP pattern ID')
     parser.add_argument('--seed', type=int, default=42,
                         help='Random seed')
-    parser.add_argument('--base-path', type=str, default='d:/Program/Plugin Neuron',
+    parser.add_argument('--base-path', type=str, default=str(Path(__file__).parent.parent),
                         help='Project root directory')
     parser.add_argument('--output-dir', type=str, default='results/final_gd_uap',
                         help='Output directory for trained Deltas (default: results/final_gd_uap)')

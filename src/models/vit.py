@@ -3,9 +3,6 @@
 Vision Transformer (ViT) for CIFAR-10/100
 Adapted for control plugin injection
 """
-from turtle import forward
-from uuid import RESERVED_FUTURE
-from requests import patch
 import torch
 import torch.nn as nn
 import math
