@@ -2,6 +2,8 @@
 
 **Artifact for DSN 2026 Paper**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19177433.svg)](https://doi.org/10.5281/zenodo.19177433)
+
 ## Overview
 
 LymphNode is a post-hoc defense framework that provides active intellectual property (IP) protection for Deep Neural Networks. It enforces a "default-deny" policy by injecting Generalized Sparse Universal Adversarial Perturbations (GSUAP) into the feature space, neutralizing model utility for unauthorized queries while selectively restoring fidelity for authorized inputs carrying a stealthy feature-domain credential.
@@ -72,10 +74,14 @@ conda create -n lymphnode python=3.10 -y
 conda activate lymphnode
 pip install -r requirements.txt
 
-# 2. Download datasets (CIFAR-10, MNIST, SVHN)
+# 2. Download pre-trained checkpoints from Zenodo
+#    https://doi.org/10.5281/zenodo.19177433
+#    Extract checkpoints/ into the project root
+
+# 3. Download datasets (CIFAR-10, MNIST, SVHN)
 python download_data.py
 
-# 3. Verify setup
+# 4. Verify setup
 python reproduce.py --exp1 --quick
 ```
 
